@@ -34,6 +34,10 @@ function AnalyticsPage() {
 
   const topCat = byCat[0];
 
+  // Monochrome palette (dark -> light) for donut/swatches, matches design
+  const MONO = ["#0a0a0a", "#3a3a3a", "#6a6a6a", "#9a9a9a", "#c0c0c0", "#dcdcdc"];
+  const byCatMono = byCat.map((c, i) => ({ ...c, shade: MONO[i] ?? "#e5e5e5" }));
+
   const delta = prevMonthTotal ? ((total - prevMonthTotal) / prevMonthTotal) * 100 : 0;
 
   // 6-month trend
@@ -86,26 +90,26 @@ function AnalyticsPage() {
         <>
           <div className="analytics-grid">
             <div className="donut-card">
-              <div className="lbl">Spending Breakdown</div>
+              <div className="lbl" style={{ alignSelf: "center", marginBottom: 8 }}>Spending Breakdown</div>
               <div style={{ width: "100%", height: 200, position: "relative" }}>
                 <ResponsiveContainer>
                   <PieChart>
                     <Pie
-                      data={byCat}
+                      data={byCatMono}
                       dataKey="value"
-                      innerRadius={60}
-                      outerRadius={85}
-                      paddingAngle={3}
+                      innerRadius={65}
+                      outerRadius={90}
+                      paddingAngle={0}
                       stroke="none"
                     >
-                      {byCat.map((c) => <Cell key={c.id} fill={c.color} />)}
+                      {byCatMono.map((c) => <Cell key={c.id} fill={c.shade} />)}
                     </Pie>
                   </PieChart>
                 </ResponsiveContainer>
                 {topCat && (
                   <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
-                    <div style={{ fontFamily: "var(--font-serif)", fontSize: 26 }}>{topCat.pct.toFixed(0)}%</div>
-                    <div style={{ fontSize: 9, letterSpacing: "0.2em", color: "var(--muted)", textTransform: "uppercase" }}>{topCat.name}</div>
+                    <div style={{ fontFamily: "var(--font-serif)", fontSize: 34, fontWeight: 500, letterSpacing: "-0.02em" }}>{topCat.pct.toFixed(0)}%</div>
+                    <div style={{ fontSize: 9, letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginTop: 2 }}>{topCat.name}</div>
                   </div>
                 )}
               </div>
@@ -113,9 +117,9 @@ function AnalyticsPage() {
 
             <div>
               <div className="cat-list">
-                {byCat.slice(0, 4).map((c) => (
+                {byCatMono.slice(0, 4).map((c) => (
                   <div key={c.id} className="cat-row">
-                    <div className="cat-swatch" style={{ background: c.color }} />
+                    <div className="cat-swatch" style={{ background: c.shade }} />
                     <div className="nm">{c.name}</div>
                     <div className="amt">
                       <div className="v">{formatCurrency(c.value)}</div>
