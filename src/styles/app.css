@@ -412,7 +412,7 @@ a { color: inherit; text-decoration: none; }
 .period-nav .center .lbl {
   font-size: 10px; letter-spacing: 0.22em; color: var(--muted); text-transform: uppercase;
 }
-.period-nav .center .pd { font-family: var(--font-serif); font-size: 22px; margin-top: 2px; }
+.period-nav .center .pd { font-family: var(--font-sans); font-size: 18px; font-weight: 500; letter-spacing: -0.01em; margin-top: 4px; }
 .period-nav button { background: none; border: none; color: var(--ink); padding: 6px; }
 
 .exp-card {
