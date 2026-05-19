@@ -332,6 +332,9 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
   padding: 0;
 }
+.amount-input span, .amount-input input { font-family: var(--font-sans); font-weight: 400; letter-spacing: -0.02em; }
+.amount-input span { font-size: 30px; }
+.amount-input input { font-size: 42px; }
 .amount-input input::placeholder { color: #ccc; }
 
 .field-label {
