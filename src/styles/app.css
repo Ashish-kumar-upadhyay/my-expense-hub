@@ -424,7 +424,7 @@ a { color: inherit; text-decoration: none; }
 .exp-card .lbl {
   font-size: 10px; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase;
 }
-.exp-card .v { font-family: var(--font-serif); font-size: 30px; margin-top: 4px; }
+.exp-card .v { font-family: var(--font-sans); font-size: 26px; font-weight: 400; letter-spacing: -0.02em; margin-top: 6px; }
 .exp-card .delta { font-size: 11px; color: var(--success); text-align: right; }
 .exp-card .delta.up { color: var(--danger); }
 
@@ -456,7 +456,7 @@ a { color: inherit; text-decoration: none; }
 .cat-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
 .cat-row .nm { flex: 1; font-size: 14px; }
 .cat-row .amt { text-align: right; }
-.cat-row .amt .v { font-family: var(--font-serif); font-size: 16px; font-weight: 500; letter-spacing: -0.01em; }
+.cat-row .amt .v { font-family: var(--font-sans); font-size: 14px; font-weight: 500; letter-spacing: -0.01em; }
 .cat-row .amt .pct { font-size: 10px; color: var(--muted); letter-spacing: 0.08em; margin-top: 2px; }
 
 .detailed-btn {
