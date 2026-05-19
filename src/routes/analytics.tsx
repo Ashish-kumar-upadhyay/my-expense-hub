@@ -108,7 +108,7 @@ function AnalyticsPage() {
                 </ResponsiveContainer>
                 {topCat && (
                   <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
-                    <div style={{ fontFamily: "var(--font-serif)", fontSize: 34, fontWeight: 500, letterSpacing: "-0.02em" }}>{topCat.pct.toFixed(0)}%</div>
+                    <div style={{ fontFamily: "var(--font-sans)", fontSize: 30, fontWeight: 500, letterSpacing: "-0.02em" }}>{topCat.pct.toFixed(0)}%</div>
                     <div style={{ fontSize: 9, letterSpacing: "0.22em", color: "var(--muted)", textTransform: "uppercase", marginTop: 2 }}>{topCat.name}</div>
                   </div>
                 )}
