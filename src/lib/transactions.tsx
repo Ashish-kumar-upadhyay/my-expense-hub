@@ -34,11 +34,11 @@ const seed = (): Transaction[] => {
     return iso(x);
   };
   return [
-    { id: "s1", type: "expense", amount: 1299, category: "shopping", date: d(0), note: "", merchant: "Apple Store", createdAt: Date.now() - 1000 },
+    { id: "s1", type: "expense", amount: 1299, category: "technology", date: d(0), note: "", merchant: "Apple Store", createdAt: Date.now() - 1000 },
     { id: "s2", type: "income", amount: 6500, category: "income", date: d(1), note: "", merchant: "Monthly Salary", createdAt: Date.now() - 2000 },
-    { id: "s3", type: "expense", amount: 42.5, category: "food", date: d(2), note: "", merchant: "The Monocle Café", createdAt: Date.now() - 3000 },
+    { id: "s3", type: "expense", amount: 42.5, category: "dining", date: d(2), note: "", merchant: "The Monocle Café", createdAt: Date.now() - 3000 },
     { id: "s4", type: "expense", amount: 840, category: "travel", date: d(3), note: "", merchant: "Lufthansa Airlines", createdAt: Date.now() - 4000 },
-    { id: "s5", type: "expense", amount: 84.2, category: "food", date: d(0), note: "", merchant: "Whole Foods Market", createdAt: Date.now() - 500 },
+    { id: "s5", type: "expense", amount: 84.2, category: "dining", date: d(0), note: "", merchant: "Whole Foods Market", createdAt: Date.now() - 500 },
     { id: "s6", type: "expense", amount: 12.5, category: "travel", date: d(0), note: "Uber", merchant: "Uber Central", createdAt: Date.now() - 200 },
     { id: "s7", type: "expense", amount: 95, category: "bills", date: d(1), note: "", merchant: "Verizon Wireless", createdAt: Date.now() - 5000 },
     { id: "s8", type: "expense", amount: 180, category: "health", date: d(1), note: "", merchant: "Equinox Membership", createdAt: Date.now() - 6000 },

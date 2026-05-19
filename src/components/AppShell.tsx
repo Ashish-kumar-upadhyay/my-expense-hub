@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, Home, List, Plus, PieChart } from "lucide-react";
 import type { ReactNode } from "react";
+import avatarUrl from "@/assets/avatar.jpg";
 
 interface Props {
   children: ReactNode;
@@ -25,7 +26,9 @@ export function AppShell({ children, title = "Financial Serenity", showMenu = tr
             )}
             <h1>{title}</h1>
           </div>
-          <div className="avatar" aria-label="Profile">FS</div>
+        <div className="avatar" aria-label="Profile">
+          <img src={avatarUrl} alt="Profile" width={36} height={36} loading="lazy" />
+        </div>
         </header>
       )}
       <main className="fade-in">{children}</main>
