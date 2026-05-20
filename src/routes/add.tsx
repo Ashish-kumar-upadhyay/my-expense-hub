@@ -5,6 +5,7 @@ import { z } from "zod";
 import { AppShell } from "@/components/AppShell";
 import { CATEGORIES, type CategoryId } from "@/lib/categories";
 import { useTransactions, type TxType } from "@/lib/transactions";
+import avatarUrl from "@/assets/avatar.jpg";
 
 const searchSchema = z.object({ id: z.string().optional() });
 
@@ -59,7 +60,9 @@ function AddPage() {
             <Link to="/transactions" className="icon-btn" aria-label="Close"><X size={20} /></Link>
             <span>{editing ? "Edit Transaction" : "Add Transaction"}</span>
           </div>
-          <div className="avatar">FS</div>
+          <div className="avatar" aria-label="Profile">
+            <img src={avatarUrl} alt="Profile" width={36} height={36} loading="lazy" />
+          </div>
         </header>
       }
     >
